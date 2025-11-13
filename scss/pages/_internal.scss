@@ -35,6 +35,14 @@
   }
 }
 
+.aviso-img-zoom {
+  margin-top: 32px;
+  
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
 #mainInternal > section {
   padding-top: 40px;
   padding-bottom: 40px;
