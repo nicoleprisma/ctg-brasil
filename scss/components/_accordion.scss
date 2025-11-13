@@ -1,0 +1,84 @@
+.accordion {
+  .accordion-item {
+    border: none;
+    border-radius: 8px !important;
+    background-color: var(--grey-scale-01);
+    border: 1px solid var(--text-grey-scale-02);
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .accordion-header {
+    line-height: normal;
+
+    button {
+      padding: 24px 64px 24px 24px !important;
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      transition: 0.3s;
+      color: var(--text-color);
+      font-family: var(--font-ctg);
+      font-size: rem(16);
+      font-style: normal;
+      font-weight: 500;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+      }
+
+      &::after {
+        content: "";
+        background-image: url(/images/icons/arrow-accordion.svg);
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.5s ease;
+        right: 20px;
+      }
+
+      &:not(.collapsed) {
+        background-color: var(--primary-01-var-7);
+        border-radius: 8px 8px 0 0;
+        color: var(--text-grey-scale-00);
+        font-weight: 700;
+
+        &::after {
+          filter: brightness(10);
+          transition: 0.5s;
+        }
+      }
+
+      &.collapsed:hover {
+      }
+    }
+  }
+
+  .accordion-collapse {
+    border: none;
+    box-shadow: none;
+
+    .accordion-body {
+      padding: 16px 24px;
+      transition: 0.3s;
+      background-color: var(--primary-01-var-7);
+      font-size: 18px;
+      font-family: var(--font-ctg);
+      font-weight: 400;
+      line-height: 27px;
+      word-wrap: break-word;
+      border-radius: 0 0 8px 8px;
+
+      p {
+        color: var(--text-grey-scale-00);
+        font-family: var(--font-ctg);
+      }
+    }
+  }
+}

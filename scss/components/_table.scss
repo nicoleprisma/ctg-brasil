@@ -1,0 +1,112 @@
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+}
+
+.table {
+  width: 100%;
+  margin: 0 0 24px 0;
+
+  &.table-central {
+    thead {
+      tr {
+        th {
+          text-align: center;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          transition: ease .3s;
+
+          &:not(:first-of-type) {
+            text-align: center;
+          }
+
+          &:hover {
+            background-color: var(--primary-01-var-6);
+            
+            img {
+              filter: brightness(10) grayscale(10);
+            }
+          }
+        }
+      }
+    }
+
+    img {
+      width: auto;
+      height: 32px;
+      object-fit: cover;
+    }
+  }
+
+  thead {
+    tr {
+      th {
+        vertical-align: middle;
+        padding: 12px 8px;
+        font-family: var(--font-ctg);
+        color: var(--text-primary-01-var-5);
+        background-color: var(--grey-scale-01);
+        font-weight: 500;
+        border-bottom: 1px solid var(--text-primary-01-var-5);
+        border-top: 1px solid var(--text-primary-01-var-5);
+        text-align: left;
+        font-size: rem(12);
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border: none;
+      
+
+      &:nth-of-type(even) {
+        td {
+          background-color: var(--grey-scale-01);
+          color: var(--text-grey-scale-09);
+        }
+      }
+
+      td {
+        text-align: left;
+        vertical-align: middle;
+        border: none;
+        padding: 12px 8px;
+        font-family: Arial, sans-serif;
+        color: var(--text-color);
+        border-bottom: 1px solid var(--text-grey-scale-03);
+        background-color: transparent;
+        font-style: normal;
+        min-width: 100px;
+        transition: ease 0.3s;
+
+        &:hover {
+          background-color: var(--primary-01-var-6);
+          color: var(--text-grey-scale-00);
+        }
+
+        &.not-active {
+          img {
+            opacity: 0.2;
+          }
+        }
+
+        &:not(first-of-type) {
+          min-width: 160px;
+        }
+
+        a {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

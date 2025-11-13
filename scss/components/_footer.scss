@@ -1,0 +1,36 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 16px 0;
+  background-color: var(--grey-scale-01);
+
+  &.footer-internas {
+    position: unset;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: rem(12);
+    }
+
+    .iframe-cotacoes {
+      height: 24px;
+    }
+
+    .selo-astri {
+      img {
+        width: 164px;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}

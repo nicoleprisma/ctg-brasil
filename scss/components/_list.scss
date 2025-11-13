@@ -1,0 +1,118 @@
+.list-documentos {
+  padding: 0;
+  margin: 24px 0 0 0;
+
+  &.list-com-data {
+    .text {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  li {
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--text-grey-scale-01);
+    background-color: var(--grey-scale-01);
+    transition: ease 0.3s;
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 16px;
+      justify-content: space-between;
+      width: 100%;
+
+      span {
+        color: var(--text-color);
+        transition: ease 0.3s;
+        font-size: 1rem;
+      }
+
+      img {
+        width: auto;
+        height: 20px;
+        object-fit: cover;
+      }
+    }
+
+    &:hover {
+      background-color: var(--grey-scale-02);
+      padding: 16px 24px;
+
+      a {
+        span {
+          color: var(--text-primary-01-default);
+        }
+
+        img {
+          filter: brightness(0) saturate(100%) invert(20%) sepia(99%) saturate(1844%) hue-rotate(193deg) brightness(100%) contrast(101%);
+        }
+      }
+    }
+  }
+}
+
+.list-resultados-busca {
+  padding: 0;
+
+  li {
+    background-color: var(--primary-01-default);
+    border: 1px solid var(--text-primary-01-default);
+    color: var(--text-grey-scale-00);
+    width: max-content;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+
+  li {
+    &:not(.previous, .next) {
+      background-color: var(--grey-scale-01);
+      border: 1px solid var(--text-grey-scale-01);
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+
+    &.previous,
+    &.next {
+      margin: 8px;
+    }
+
+    &.current {
+      background-color: var(--primary-01-default);
+      border: 1px solid var(--text-primary-01-default);
+
+      a {
+        color: var(--text-grey-scale-00);
+        font-weight: 700;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text-color);
+    }
+  }
+
+  .previous {
+    a {
+      img {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
