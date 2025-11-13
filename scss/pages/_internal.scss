@@ -34,12 +34,12 @@
     }
   }
 }
-
+ 
 .aviso-img-zoom {
   margin-top: 32px;
-  
+
   @media (min-width: 992px) {
-    display: none;
+    display: none !important;
   }
 }
 

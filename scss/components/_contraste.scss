@@ -202,6 +202,8 @@
   }
 
   .aviso-img-zoom {
-    filter: brightness(10);
+    img {
+      filter: brightness(10);
+    }
   }
 }
