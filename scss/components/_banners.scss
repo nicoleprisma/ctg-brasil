@@ -33,14 +33,14 @@ img.openImgZoom {
     height: calc(100vh - 110px);
   }
 
-  @media (max-width: 528px) {
+  @media (max-width: 459px) {
     height: calc(100vh - 142px);
   }
 
   &:before {
     content: "";
     background: linear-gradient(
-      180deg,
+      180deg, 
       rgba(29, 29, 29, 0.8) 0%,
       rgba(29, 29, 29, 0.4) 101.2%
     );
