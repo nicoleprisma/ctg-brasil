@@ -258,15 +258,16 @@
   width: 100%;
 
   input {
-    padding: 16px;
+    padding: 8px;
     border-radius: 8px;
   }
 
   .search-help {
-    padding: 0 20px;
+    padding: 5px 8px;
     
     small {
       color: var(--text-grey-scale-00);
+      font-size: rem(14);
     }
   }
 
@@ -279,6 +280,18 @@
   margin-top: 32px;
   margin-bottom: 16px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .institucional-mobile {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    // text-decoration: none;
+    color: var(--text-grey-scale-00);
+    font-size: rem(16);
+  }
 
   @media (min-width: 992px) {
     display: none;
@@ -294,7 +307,7 @@
     li {
 
       a {
-        font-size: .88rem;
+        font-size: rem(16);
         text-decoration: none;
         color: var(--text-grey-scale-00);
         font-weight: 500;

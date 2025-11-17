@@ -457,7 +457,14 @@ body {
         .dropdown-menu {
           li {
             a {
-              color: var(--text-color);
+              color: var(--text-grey-scale-00);
+              font-size: rem(18);
+            }
+
+            &:hover {
+              a {
+                background-color: transparent;
+              }
             }
           }
         }
@@ -546,6 +553,7 @@ body {
 
       @media (max-width: 991px) {
         padding: 0px;
+        font-size: rem(24);
       }
 
       &:after {
@@ -561,6 +569,7 @@ body {
 
       @media (max-width: 1199px) {
         border-radius: 8px;
+        background-color: var(--text-primary-01-var-5);
       }
 
       li {
@@ -670,17 +679,19 @@ body {
       margin-top: 16px;
       padding: 16px 0;
       height: max-content !important;
+      background-color: var(--primary-01-var-5);
 
       li {
         a {
           padding: 4px 24px;
           font-family: var(--font-ctg);
+          font-weight: 500;
           display: flex;
           align-items: center;
           white-space: wrap;
 
           &:after {
-            filter: brightness(0);
+            filter: brightness(10);
             right: 20px;
           }
         }
