@@ -214,9 +214,9 @@
 
 .flex-filtro-tabs {
   display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: center;
+  flex-direction: column;
+ align-items: flex-start;
+  gap: 24px;
   margin-bottom: 72px;
 
   @media (max-width: 991px) {
@@ -230,7 +230,7 @@
     border-radius: 16px;
     gap: 4px;
     padding: 4px;
-    max-width: 75%;
+    width: 100%;
     flex-wrap: nowrap;
     overflow: scroll;
 
@@ -276,133 +276,35 @@
   }
 
   .filter {
-    .filter-controls {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
+    display: flex;
+    gap: 8px;
+    align-items: center;
 
-      .filter-button {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-        border: none;
-        position: relative;
-        z-index: 2;
-        gap: 8px;
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    span{
+      font-family: var(--font-ctg);
+        font-weight: 500;
+    }
+
+    select {
+      border-radius: 8px;
         padding: 8px 16px;
-        border-radius: 12px;
-        background-color: var(--grey-scale-01);
+        outline: 0;
         border: 1px solid var(--text-grey-scale-02);
+        background-color: var(--grey-scale-01);
+        color: var(--text-tertiary-01-var-4);
+        font-size: rem(16);
+        color: var(--text-color);
+        font-family: var(--font-ctg);
+        font-weight: 500;
 
-        span {
-          font-family: var(--font-ctg);
+        @media (max-width: 991px) {
+          width: 100%;
         }
-
-        img {
-          transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-        }
-
-        &:hover {
-          background-color: var(--grey-scale-02);
-          border: 1px solid var(--text-grey-scale-03);
-          color: var(--text-primary-01-var-6);
-
-          img {
-            filter: brightness(0) saturate(100%) invert(17%) sepia(88%)
-              saturate(2346%) hue-rotate(202deg) brightness(101%) contrast(100%);
-          }
-        }
-
-        &.active {
-          background-color: var(--primary-01-var-7);
-          border: 1px solid var(--text-primary-01-var-8);
-          color: var(--text-grey-scale-00);
-
-          img {
-            filter: brightness(10);
-          }
-        }
-      }
-
-      .filter-options {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        overflow: hidden;
-        max-width: 0;
-        opacity: 0;
-        transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-
-        &.show {
-          max-width: 500px;
-          opacity: 1;
-        }
-
-        .filter-select {
-          position: relative;
-          display: flex;
-          align-items: center;
-          transform: translateX(-30px);
-          opacity: 0;
-          transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-          white-space: nowrap;
-
-          &.animate-in {
-            transform: translateX(0);
-            opacity: 1;
-          }
-
-          // Delay para criar efeito staggered
-          &:nth-child(1) {
-            transition-delay: 0.1s;
-          }
-
-          &:nth-child(2) {
-            transition-delay: 0.2s;
-          }
-
-          &:nth-child(3) {
-            transition-delay: 0.3s;
-          }
-
-          select {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            padding: 8px 40px 8px 16px;
-            border-radius: 12px;
-            border: 1px solid var(--text-grey-scale-02);
-            background-color: var(--grey-scale-01);
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-            max-width: 200px;
-            font-family: var(--font-ctg);
-            color: var(--text-color);
-
-            &:hover {
-              background-color: var(--grey-scale-02);
-              border: 1px solid var(--text-grey-scale-03);
-              color: var(--text-primary-01-var-6);
-            }
-
-            option {
-              font-size: rem(14);
-            }
-          }
-
-          img {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 12px;
-            height: 12px;
-            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-          }
-        }
-      }
     }
   }
 }
