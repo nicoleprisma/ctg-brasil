@@ -24,13 +24,15 @@ img.openImgZoom {
 
 .banner-home {
   overflow: hidden;
-  position: absolute;
+  position: relative;
   height: calc(100vh - 56px);
   width: 100vw;
   z-index: 1;
+  margin-top: -134px;
 
   @media (max-width: 991px) {
     height: calc(100vh - 110px);
+    margin-top: -91px;
   }
 
   @media (max-width: 459px) {
