@@ -1,5 +1,5 @@
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
@@ -20,7 +20,7 @@ footer {
     p {
       font-size: rem(12);
     }
-
+ 
     .iframe-cotacoes {
       height: 24px;
     }
